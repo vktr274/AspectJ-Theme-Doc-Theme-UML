@@ -1,6 +1,6 @@
 package sk.fiit;
 
-public interface PaymentMethod {
+public interface Payment {
     void pay(int amount);
 
     void refund(int amount);

@@ -1,6 +1,6 @@
 package sk.fiit;
 
-public class Mastercard implements PaymentMethod {
+public class Mastercard implements Payment {
     @Override
     public void pay(int amount) {
         System.out.println("Mastercard payment of " + amount + "$ processed.");
