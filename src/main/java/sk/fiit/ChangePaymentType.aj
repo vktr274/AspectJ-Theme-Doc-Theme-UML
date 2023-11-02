@@ -4,14 +4,10 @@ public aspect ChangePaymentType {
     boolean useSaferMethod = true;
     pointcut paymentMethodConstructor() : call(OnlineCardPayment.new());
 
-    OnlineCardPayment changePaymentType(OnlineCardPayment paymentMethod) {
+    OnlineCardPayment around() : paymentMethodConstructor() {
         if (useSaferMethod) {
             return new PayPal();
         }
-        return paymentMethod;
-    }
-
-    OnlineCardPayment around() : paymentMethodConstructor() {
-        return changePaymentType(proceed());
+        return proceed();
     }
 }
