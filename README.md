@@ -52,4 +52,4 @@ the Cuckoo's Egg design pattern to change an object's class at runtime.
 
 ## Theme/Doc and Theme/UML Diagram
 
-![Theme/Doc and Theme/UML Diagram](./theme_doc_uml.png)
+![Theme/Doc and Theme/UML Diagram](./theme-doc-uml.png)
