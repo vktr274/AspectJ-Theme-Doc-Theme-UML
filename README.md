@@ -23,6 +23,30 @@ Next, we create an instance of `OnlineCard` and call its `pay` and `refund` meth
 then print the class name, which is `OnlineCard` if `useSaferMethod` is set to `false`
 and `PayPal` if `useSaferMethod` is set to `true`.
 
+If `useSaferMethod` is set to `true`, the output will be:
+
+```text
+PayPal payment of 100$ processed.
+PayPal refund of 100$ processed.
+Class of paypal is PayPal.
+Changing OnlineCardPayment to PayPal.
+PayPal payment of 200$ processed.
+PayPal refund of 200$ processed.
+Class of onlineCard is PayPal.
+```
+
+If `useSaferMethod` is set to `false`, the output will be:
+
+```text
+PayPal payment of 100$ processed.
+PayPal refund of 100$ processed.
+Class of paypal is PayPal.
+Changing OnlineCardPayment to PayPal.
+Online card payment of 200$ processed.
+Online card refund of 200$ processed.
+Class of onlineCard is OnlineCard.
+```
+
 This proves that the aspect is working as intended and that we successfully implemented
 the Cuckoo's Egg design pattern to change an object's class at runtime.
 
