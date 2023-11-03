@@ -10,11 +10,11 @@ The proof of concept contains an interface called `PaymentMethod` containing met
 `refund` methods. The `PayPal` class inherits from `OnlineCard` and overrides its
 `pay` and `refund` methods.
 
-The aspect `ChangePaymentMethod`contains a pointcut `paymentMethodConstructor()`
-to the `OnlineCard` constructor. The aspect also contains a boolean variable
+The aspect `UseSaferPaymentMethod`contains a pointcut `paymentMethodConstructor()`
+that follows the `OnlineCard` constructor call join point. The aspect also contains a boolean variable
 `useSaferMethod`, which, if set to `true`, will cause the `around()` advice to call the
-`PayPal` constructor and return the created instance, and if set to `false`, will
-cause the `around` advice to return `proceed()`.
+`PayPal` constructor and return the created `PayPal` instance, and if set to `false`, will
+cause the `around()` advice to return `proceed()`, which is of class `OnlineCard`.
 
 In the `Main` class, we create an instance of `PayPal` and call its `pay` and `refund`
 methods and then print the class name, which is `PayPal`.
