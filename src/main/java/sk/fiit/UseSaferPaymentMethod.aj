@@ -5,10 +5,11 @@ public aspect UseSaferPaymentMethod {
     pointcut paymentMethodConstructor() : call(OnlineCard.new());
 
     OnlineCard around() : paymentMethodConstructor() {
-        System.out.println("Changing OnlineCard to PayPal.");
         if (useSaferMethod) {
+            System.out.println("Changing OnlineCard class to PayPal class.");
             return new PayPal();
         }
+        System.out.println("Using OnlineCard class.");
         return proceed();
     }
 }

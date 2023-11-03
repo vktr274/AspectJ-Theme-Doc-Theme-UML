@@ -5,7 +5,7 @@ public class Main {
         PayPal paypal = new PayPal();
         paypal.pay(100);
         paypal.refund(100);
-        System.out.println("Class of paypal object is " + paypal.getClass().getSimpleName() + ".");
+        System.out.println("Class of paypal object is " + paypal.getClass().getSimpleName() + ".\n");
 
         OnlineCard onlineCard = new OnlineCard();
         onlineCard.pay(200);
