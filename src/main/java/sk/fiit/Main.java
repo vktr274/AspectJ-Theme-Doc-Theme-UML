@@ -2,15 +2,16 @@ package sk.fiit;
 
 public class Main {
     public static void main(String[] args)  {
-        Payment paypalTest = new PayPal();
-        Payment onlineCardTest = new OnlineCardPayment();
+        var paypal = new PayPal();
+        paypal.pay(100);
+        paypal.refund(100);
+        System.out.println("Class of paypal is " + paypal.getClass().getSimpleName() + ".");
 
-        paypalTest.pay(100);
-        paypalTest.refund(100);
-        System.out.println(paypalTest);
-
-        onlineCardTest.pay(100);
-        onlineCardTest.refund(100);
-        System.out.println(onlineCardTest);
+        var onlineCardPayment = new OnlineCardPayment();
+        onlineCardPayment.pay(200);
+        onlineCardPayment.refund(200);
+        /* If useSaferMethod in the ChangePaymentType aspect is set to true,
+        the class printed out will be PayPal, otherwise it will be OnlineCardPayment. */
+        System.out.println("Class of onlineCardPayment is " + onlineCardPayment.getClass().getSimpleName() + ".");
     }
 }

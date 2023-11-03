@@ -5,6 +5,7 @@ public aspect ChangePaymentType {
     pointcut paymentMethodConstructor() : call(OnlineCardPayment.new());
 
     OnlineCardPayment around() : paymentMethodConstructor() {
+        System.out.println("Changing OnlineCardPayment to PayPal.");
         if (useSaferMethod) {
             return new PayPal();
         }
