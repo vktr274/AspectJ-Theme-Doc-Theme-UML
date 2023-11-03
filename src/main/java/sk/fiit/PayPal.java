@@ -1,6 +1,6 @@
 package sk.fiit;
 
-public class PayPal extends OnlineCardPayment {
+public class PayPal extends OnlineCard {
     @Override
     public void pay(int amount) {
         System.out.println("PayPal payment of " + amount + "$ processed.");

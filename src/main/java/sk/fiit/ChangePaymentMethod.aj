@@ -1,10 +1,10 @@
 package sk.fiit;
 
-public aspect ChangePaymentType {
+public aspect ChangePaymentMethod {
     boolean useSaferMethod = true;
-    pointcut paymentMethodConstructor() : call(OnlineCardPayment.new());
+    pointcut paymentMethodConstructor() : call(sk.fiit.OnlineCard.new());
 
-    OnlineCardPayment around() : paymentMethodConstructor() {
+    OnlineCard around() : paymentMethodConstructor() {
         System.out.println("Changing OnlineCardPayment to PayPal.");
         if (useSaferMethod) {
             return new PayPal();

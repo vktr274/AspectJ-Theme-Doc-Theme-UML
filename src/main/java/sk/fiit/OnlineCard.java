@@ -1,6 +1,6 @@
 package sk.fiit;
 
-public class OnlineCardPayment implements Payment {
+public class OnlineCard implements PaymentMethod {
     @Override
     public void pay(int amount) {
         System.out.println("Online card payment of " + amount + "$ processed.");
