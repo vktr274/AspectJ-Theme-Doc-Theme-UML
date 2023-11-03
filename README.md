@@ -1,5 +1,8 @@
 # Cuckoo's Egg Design Pattern Implementation in AspectJ
 
+Author: Bc. Viktor Modroczký\
+Course: Aspect-oriented Software Development @ FIIT STU
+
 ## Proof of Concept
 
 The proof of concept contains an interface called `PaymentMethod` containing methods
