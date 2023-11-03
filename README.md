@@ -53,6 +53,9 @@ This proves that the aspect is working as intended and that we successfully impl
 the Cuckoo's Egg design pattern to call a different constructor based on a boolean value.
 This effectively means that we changed the object's class to a subclass at runtime.
 
-## Theme/Doc and Theme/UML Diagram
+## Theme/Doc and Theme/UML Diagrams
 
-![Theme/Doc and Theme/UML Diagram](./theme-doc-uml.png)
+The following diagram shows the Theme/Doc and Theme/UML diagrams of the above described
+proof of concept.
+
+![Theme/Doc and Theme/UML Diagrams](./theme-doc-uml.png)
