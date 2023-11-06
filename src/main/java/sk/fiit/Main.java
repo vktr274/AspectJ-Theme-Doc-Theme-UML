@@ -10,8 +10,8 @@ public class Main {
         OnlineCard onlineCard = new OnlineCard();
         onlineCard.pay(200);
         onlineCard.refund(200);
-        /* If useSaferMethod in the ChangePaymentType aspect is set to true,
-        the class printed out will be PayPal, otherwise it will be OnlineCardPayment. */
+        /* If useSaferMethod in the UseSaferPaymentMethod aspect is set to true,
+        the class printed out will be PayPal, otherwise it will be OnlineCard. */
         System.out.println("Class of onlineCard object is " + onlineCard.getClass().getSimpleName() + ".");
     }
 }
