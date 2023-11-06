@@ -23,7 +23,7 @@ Next, we create an instance of `OnlineCard` and call its `pay` and `refund` meth
 then print the class name, which is `OnlineCard` if `useSaferMethod` is set to `false`
 and `PayPal` if `useSaferMethod` is set to `true`.
 
-If `useSaferMethod` is set to `true`, the output will be:
+If `useSaferMethod` is set to `true`, the output would be:
 
 ```text
 PayPal payment of 100$ processed.
@@ -36,7 +36,7 @@ PayPal refund of 200$ processed.
 Class of onlineCard object is PayPal.
 ```
 
-If `useSaferMethod` is set to `false`, the output will be:
+If `useSaferMethod` is set to `false`, the output would be:
 
 ```text
 PayPal payment of 100$ processed.
